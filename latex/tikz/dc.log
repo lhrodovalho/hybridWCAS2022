@@ -1,9 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.5.1)  16 JUL 2022 11:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.5.1)  16 JUL 2022 13:29
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
-**\def\tikzexternalrealjob{main}\input{main}
-(./main.tex (/usr/share/texlive/texmf-dist/tex/latex/ieeetran/IEEEtran.cls
+**\def\tikzexternalrealjob{Rodovalho2022Hybrid}\input{Rodovalho2022Hybrid}
+(./Rodovalho2022Hybrid.tex (/usr/share/texlive/texmf-dist/tex/latex/ieeetran/IE
+EEtran.cls
 Document Class: IEEEtran 2015/08/26 V1.8b by Michael Shell
 -- See the "IEEEtran_HOWTO" manual for usage information.
 -- http://www.michaelshell.org/tex/ieeetran/
@@ -1174,6 +1175,10 @@ LaTeX Warning: Citation `barthelemy2008ota' on page 1 undefined on input line 1
 LaTeX Warning: Reference `fig:vieru:sch' on page 1 undefined on input line 131.
 
 
+
+LaTeX Warning: Citation `vieru2011inverter' on page 1 undefined on input line 1
+31.
+
 The command '\includegraphics [scale=0.50]{circuits/barth.pdf}' has been optimi
 zed away. Use '/tikz/external/optimize=false' to disable this.
 The command '\includegraphics [scale=0.50]{circuits/vieru.pdf}' has been optimi
@@ -1228,7 +1233,8 @@ LaTeX Warning: Reference `fig:nautanauta:sch' on page 1 undefined on input line
  184.
 
 
-LaTeX Warning: Citation `lee2007design' on page 1 undefined on input line 184.
+LaTeX Warning: Citation `you1997multistage' on page 1 undefined on input line 1
+84.
 
 The command '\includegraphics [scale=0.50]{circuits/nautanauta.pdf}' has been o
 ptimized away. Use '/tikz/external/optimize=false' to disable this.
@@ -1244,6 +1250,9 @@ LaTeX Warning: Reference `fig:manfvieru:sch' on page 2 undefined on input line
 
 The command '\includegraphics [scale=0.50]{circuits/manfvieru.pdf}' has been op
 timized away. Use '/tikz/external/optimize=false' to disable this.
+
+LaTeX Warning: Citation `repo' on page 2 undefined on input line 213.
+
 LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 2
 13.
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd
@@ -1333,13 +1342,13 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 27974 strings out of 480113
- 702687 string characters out of 5892774
- 2985032 words of memory out of 5000000
- 45496 multiletter control sequences out of 15000+600000
+ 27975 strings out of 480113
+ 702802 string characters out of 5892774
+ 2986231 words of memory out of 5000000
+ 45497 multiletter control sequences out of 15000+600000
  497480 words of font info for 92 fonts, out of 8000000 for 9000
  83 hyphenation exceptions out of 8191
- 103i,21n,97p,787b,2330s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 103i,21n,97p,818b,2330s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf
 -dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fo

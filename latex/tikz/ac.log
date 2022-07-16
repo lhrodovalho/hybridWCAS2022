@@ -1,9 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.5.1)  21 MAY 2022 21:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.5.1)  16 JUL 2022 13:29
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
-**\def\tikzexternalrealjob{main}\input{main}
-(./main.tex (/usr/share/texlive/texmf-dist/tex/latex/ieeetran/IEEEtran.cls
+**\def\tikzexternalrealjob{Rodovalho2022Hybrid}\input{Rodovalho2022Hybrid}
+(./Rodovalho2022Hybrid.tex (/usr/share/texlive/texmf-dist/tex/latex/ieeetran/IE
+EEtran.cls
 Document Class: IEEEtran 2015/08/26 V1.8b by Michael Shell
 -- See the "IEEEtran_HOWTO" manual for usage information.
 -- http://www.michaelshell.org/tex/ieeetran/
@@ -1075,78 +1076,212 @@ Package pgfplots notification 'compat/show suggested version=true': document ha
 s been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
 
 
-LaTeX Warning: Citation `nauta1992cmos' on page 1 undefined on input line 100.
+Underfull \hbox (badness 1424) in paragraph at lines 75--77
+[]\OT1/ptm/b/it/9 Abstract\OT1/ptm/b/n/9 ---Inverter-based OTAs (Op-er-a-tional
+ Transcon-duc-
+ []
+
+
+LaTeX Warning: Citation `nauta1992cmos' on page 1 undefined on input line 85.
+
+
+LaTeX Warning: Citation `barthelemy2008ota' on page 1 undefined on input line 8
+5.
+
+
+LaTeX Warning: Citation `vieru2012ultra' on page 1 undefined on input line 85.
+
+
+LaTeX Warning: Citation `lv2019inverter' on page 1 undefined on input line 85.
+
+
+LaTeX Warning: Citation `benvenuti2021design' on page 1 undefined on input line
+ 85.
+
+
+LaTeX Warning: Citation `nauta1992cmos' on page 1 undefined on input line 87.
+
+
+LaTeX Warning: Citation `barthelemy2008ota' on page 1 undefined on input line 8
+7.
+
+
+LaTeX Warning: Citation `vieru2011inverter' on page 1 undefined on input line 8
+7.
 
 
 LaTeX Warning: Citation `manfredini2020ultra' on page 1 undefined on input line
- 100.
+ 87.
+
+
+LaTeX Warning: Reference `sc:basic' on page 1 undefined on input line 87.
+
+
+LaTeX Warning: Reference `sc:hybrid' on page 1 undefined on input line 87.
+
+
+LaTeX Warning: Reference `sc:results' on page 1 undefined on input line 87.
 
 
 LaTeX Warning: Reference `section:conclusion' on page 1 undefined on input line
- 104.
+ 87.
 
-The command '\includegraphics [scale=0.55]{circuits/inv_symbol.pdf}' has been o
-ptimized away. Use '/tikz/external/optimize=false' to disable this.
-The command '\includegraphics [scale=0.55]{circuits/inv_sch.pdf}' has been opti
+The command '\includegraphics [scale=0.50]{circuits/inv_sch.pdf}' has been opti
 mized away. Use '/tikz/external/optimize=false' to disable this.
-The command '\includegraphics [scale=0.55]{circuits/inv_parallel.pdf}' has been
+The command '\includegraphics [scale=0.50]{circuits/inv_symbol.pdf}' has been o
+ptimized away. Use '/tikz/external/optimize=false' to disable this.
+The command '\includegraphics [scale=0.50]{circuits/inv_parallel.pdf}' has been
  optimized away. Use '/tikz/external/optimize=false' to disable this.
 
+LaTeX Warning: Reference `fig:inv:schematic' on page 1 undefined on input line 
+119.
+
+
+LaTeX Warning: Reference `fig:inv:symbol' on page 1 undefined on input line 119
+.
+
+
+LaTeX Warning: Citation `rodovalho2021push' on page 1 undefined on input line 1
+19.
+
+
 LaTeX Warning: Reference `fig:inv:parallel' on page 1 undefined on input line 1
-34.
+19.
 
 
-LaTeX Warning: Citation `rodovalho2020push' on page 1 undefined on input line 1
-34.
+LaTeX Warning: Reference `fig:nauta:sch' on page 1 undefined on input line 121.
 
-The command '\includegraphics [scale=0.55]{circuits/nauta.pdf}' has been optimi
+
+
+LaTeX Warning: Citation `nauta1992cmos' on page 1 undefined on input line 121.
+
+The command '\includegraphics [scale=0.50]{circuits/nauta.pdf}' has been optimi
 zed away. Use '/tikz/external/optimize=false' to disable this.
 
-LaTeX Warning: Citation `nauta1992cmos' on page 1 undefined on input line 189.
+LaTeX Warning: Citation `nauta1992cmos' on page 1 undefined on input line 126.
 
 
-LaTeX Warning: Citation `nauta1992cmos' on page 1 undefined on input line 189.
+LaTeX Warning: Citation `nauta1992cmos' on page 1 undefined on input line 126.
 
-The command '\includegraphics [scale=0.55]{circuits/barth.pdf}' has been optimi
+
+LaTeX Warning: Reference `fig:barth:sch' on page 1 undefined on input line 131.
+
+
+
+LaTeX Warning: Citation `barthelemy2008ota' on page 1 undefined on input line 1
+31.
+
+
+LaTeX Warning: Reference `fig:vieru:sch' on page 1 undefined on input line 131.
+
+
+
+LaTeX Warning: Citation `vieru2011inverter' on page 1 undefined on input line 1
+31.
+
+The command '\includegraphics [scale=0.50]{circuits/barth.pdf}' has been optimi
+zed away. Use '/tikz/external/optimize=false' to disable this.
+The command '\includegraphics [scale=0.50]{circuits/vieru.pdf}' has been optimi
 zed away. Use '/tikz/external/optimize=false' to disable this.
 
 LaTeX Warning: Citation `barthelemy2008ota' on page 1 undefined on input line 1
-99.
+47.
+
+
+LaTeX Warning: Citation `vieru2012ultra' on page 1 undefined on input line 147.
+
 
 
 LaTeX Warning: Citation `barthelemy2008ota' on page 1 undefined on input line 1
-99.
+47.
 
-The command '\includegraphics [scale=0.55]{circuits/vieru.pdf}' has been optimi
-zed away. Use '/tikz/external/optimize=false' to disable this.
 
-LaTeX Warning: Citation `vieru2012ultra' on page 1 undefined on input line 209.
+LaTeX Warning: Citation `vieru2012ultra' on page 1 undefined on input line 147.
 
 
 
-LaTeX Warning: Citation `vieru2012ultra' on page 1 undefined on input line 209.
+LaTeX Warning: Citation `manfredini2020ultra' on page 1 undefined on input line
+ 151.
 
 
-The command '\includegraphics [scale=0.55]{circuits/manf.pdf}' has been optimiz
+LaTeX Warning: Reference `fig:manf:sch' on page 1 undefined on input line 151.
+
+The command '\includegraphics [scale=0.50]{circuits/manf.pdf}' has been optimiz
 ed away. Use '/tikz/external/optimize=false' to disable this.
 
 LaTeX Warning: Citation `manfredini2020ultra' on page 1 undefined on input line
- 216.
+ 155.
 
 
 LaTeX Warning: Citation `manfredini2020ultra' on page 1 undefined on input line
- 216.
+ 155.
 
-The command '\includegraphics [scale=0.55]{circuits/barthnauta.pdf}' has been o
+
+LaTeX Warning: Reference `fig:barthnauta:sch' on page 1 undefined on input line
+ 163.
+
+The command '\includegraphics [scale=0.50]{circuits/barthnauta.pdf}' has been o
 ptimized away. Use '/tikz/external/optimize=false' to disable this.
-The command '\includegraphics [scale=0.55]{circuits/barthmanf.pdf}' has been op
+
+LaTeX Warning: Reference `fig:barthmanf:sch' on page 1 undefined on input line 
+172.
+
+The command '\includegraphics [scale=0.50]{circuits/barthmanf.pdf}' has been op
 timized away. Use '/tikz/external/optimize=false' to disable this.
-The command '\includegraphics [scale=0.55]{circuits/nautanauta.pdf}' has been o
+
+LaTeX Warning: Reference `fig:nautanauta:sch' on page 1 undefined on input line
+ 184.
+
+
+LaTeX Warning: Citation `you1997multistage' on page 1 undefined on input line 1
+84.
+
+The command '\includegraphics [scale=0.50]{circuits/nautanauta.pdf}' has been o
 ptimized away. Use '/tikz/external/optimize=false' to disable this.
-The command '\includegraphics [scale=0.55]{circuits/nautavieru.pdf}' has been o
+
+LaTeX Warning: Reference `fig:nautavieru:sch' on page 1 undefined on input line
+ 193.
+
+The command '\includegraphics [scale=0.50]{circuits/nautavieru.pdf}' has been o
 ptimized away. Use '/tikz/external/optimize=false' to disable this.
-The command '\includegraphics [scale=0.55]{circuits/manfvieru.pdf}' has been op
+
+LaTeX Warning: Reference `fig:manfvieru:sch' on page 2 undefined on input line 
+202.
+
+The command '\includegraphics [scale=0.50]{circuits/manfvieru.pdf}' has been op
 timized away. Use '/tikz/external/optimize=false' to disable this.
+
+LaTeX Warning: Citation `repo' on page 2 undefined on input line 213.
+
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 2
+13.
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd
+File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
+)
+
+LaTeX Warning: Reference `table:ota:sizing' on page 2 undefined on input line 2
+13.
+
+LaTeX Font Info:    Trying to load font information for U+msa on input line 218
+.
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 218
+.
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+
+LaTeX Warning: Reference `table:ota:summary' on page 2 undefined on input line 
+232.
+
+
+LaTeX Warning: Reference `fig:sim:ac' on page 2 undefined on input line 232.
+
+
+LaTeX Warning: Reference `fig:sim:dc' on page 2 undefined on input line 234.
+
 (./plots/ac.tex
 \openout4 = `tikz/ac.dpth'.
 
@@ -1158,26 +1293,11 @@ PGFPlots: reading {./data/ac_df_av.csv}
 
 PGFPlots: reading {./data/ac_df_av.csv}
 PGFPlots: reading {./data/ac_df_av.csv}
-LaTeX Font Info:    Trying to load font information for U+msa on input line 52.
-
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 52.
-
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
 Package pgfplots info on input line 68: Using 'lua backend=false' for axis: xmo
 de=log unsupported (yet).
 PGFPlots: reading {./data/ac_df_ph.csv}
 PGFPlots: reading {./data/ac_df_ph.csv}
 PGFPlots: reading {./data/ac_df_ph.csv}
-LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 1
-03.
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd
-File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
-)
 Package pgfplots info on input line 119: Using 'lua backend=false' for axis: xm
 ode=log unsupported (yet).
 PGFPlots: reading {./data/ac_cm_av.csv}
@@ -1213,24 +1333,15 @@ ode=log unsupported (yet).
 PGFPlots: reading {./data/ac_cm_av.csv}
 PGFPlots: reading {./data/ac_cm_av.csv}
 PGFPlots: reading {./data/ac_cm_av.csv}
-[1
+[2
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}])
-
-LaTeX Warning: Citation `nauta1992cmos' on page 1 undefined on input line 305.
-
-
-LaTeX Warning: Citation `nauta1992cmos' on page 1 undefined on input line 305.
-
-(./plots/dc.tex
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]) (./plots/dc.tex
 A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
 isable this.
 )
-
-LaTeX Warning: Citation `nauta1992cmos' on page 1 undefined on input line 312.
-
-
-LaTeX Warning: Citation `nauta1992cmos' on page 1 undefined on input line 312.
+Underfull \hbox (badness 1910) in paragraph at lines 272--273
+\OT1/ptm/m/n/10 out-put swing. The other ba-sic topolo-gies, pro-posed by
+ []
 
 No file tikz/ac.bbl.
 
@@ -1249,19 +1360,19 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 27900 strings out of 480113
- 701128 string characters out of 5892774
- 2130025 words of memory out of 5000000
- 45422 multiletter control sequences out of 15000+600000
- 496112 words of font info for 86 fonts, out of 8000000 for 9000
+ 27932 strings out of 480113
+ 701719 string characters out of 5892774
+ 2135568 words of memory out of 5000000
+ 45454 multiletter control sequences out of 15000+600000
+ 497480 words of font info for 92 fonts, out of 8000000 for 9000
  83 hyphenation exceptions out of 8191
- 103i,21n,97p,942b,2330s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 103i,21n,97p,818b,2330s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-
 dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type
 1/urw/times/utmr8a.pfb>
-Output written on tikz/ac.pdf (1 page, 185805 bytes).
+Output written on tikz/ac.pdf (1 page, 185809 bytes).
 PDF statistics:
  32 PDF objects out of 1000 (max. 8388607)
  20 compressed objects within 1 object stream
