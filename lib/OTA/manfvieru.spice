@@ -1,0 +1,21 @@
+.subckt manfvieru ip im op om vdd vss
+  xap ip xm vdd vss inv2_1
+  xam im xp vdd vss inv2_1
+  xbp xp y  vdd vss inv1_1
+  xbm xm y  vdd vss inv1_1
+  xc  y  y  vdd vss inv2_1
+  xd  y  z  vdd vss inv2_1
+  xe  z  z  vdd vss inv2_1
+  xfp z  xp vdd vss inv2_1
+  xfm z  xm vdd vss inv2_1
+  xgp xp om vdd vss inv4_1
+  xgm xm op vdd vss inv4_1
+  xhp op z  vdd vss inv1_1
+  xhm om z  vdd vss inv1_1
+  xip ip om vdd vss inv4_1
+  xim im op vdd vss inv4_1
+
+  ccp xp om 2p
+  ccm xm op 2p
+.ends
+

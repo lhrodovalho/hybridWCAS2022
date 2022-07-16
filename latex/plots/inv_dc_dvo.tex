@@ -1,0 +1,51 @@
+\tikzsetnextfilename{inv_dc_dvo}
+\begin{tikzpicture}
+\begin{axis}[
+    xlabel={Output Voltage [mV]},
+    ylabel={Voltage Gain [dB]},
+    xmin=0, xmax=600,
+    ymin=10, ymax=60,
+    xtick={0,150,...,600},
+    ytick={20,30,40,50},
+%        yticklabel style={/pgf/number format/.cd,fixed,fixed zerofill,precision=0},
+    legend pos=north east,
+    legend columns=3,
+%    width  = 8.0cm,
+%    height = 6.0cm    
+]
+
+\addplot [
+    color=red,
+    no marks,
+    mark repeat = 6,
+    mark phase = 1,
+    solid
+    ]
+    table [each nth point={1}, x expr=\thisrowno{0}*1e3, y expr=\thisrowno{1}, col sep=comma]
+    {./data/inv0_dvo.csv};
+\addlegendentry{INV0}
+
+\addplot [
+	color=blue,
+	no marks,
+	mark repeat = 6,
+	mark phase = 1,
+	dashed
+]
+	table [each nth point={1}, x expr=\thisrowno{0}*1e3, y expr=\thisrowno{1}, col sep=comma]
+    {./data/inv1_dvo.csv};
+\addlegendentry{INV1}
+
+\addplot [
+	color=green,
+	no marks,
+	mark repeat = 6,
+	mark phase = 1,
+	dotted
+	]
+	table [each nth point={1}, x expr=\thisrowno{0}*1e3, y expr=\thisrowno{1}, col sep=comma]
+    {./data/inv2_dvo.csv};
+\addlegendentry{INV2}
+
+\end{axis}
+\end{tikzpicture}

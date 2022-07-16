@@ -1,0 +1,52 @@
+\documentclass{standalone}
+
+\usepackage[american]{circuitikz}
+\usetikzlibrary{positioning}
+\usepackage{amsmath}
+\usepackage{pgfplots}
+\pgfplotsset{compat=newest}
+\usepackage{textcomp}
+\usepackage{textgreek}
+
+\usepackage{tikz}
+\usetikzlibrary{external}
+%\tikzexternalize[prefix=tikz/,only named=true]
+%\tikzexternalize
+
+%\usepgfplotslibrary{external}
+%\tikzsetexternalprefix{tikz/}
+
+\pgfplotsset{
+every axis/.append style={
+	font=\tiny,
+    ymajorgrids=true,
+    xmajorgrids=true,
+    grid style=dashed,
+    width  = 6.5cm,
+    height = 6.0cm,
+	},
+every axis plot/.append style={
+	mark size=1,
+	mark options=solid
+	},
+legend image code/.code={
+\draw[mark repeat=2,mark phase=2]
+plot coordinates {
+(0cm,0cm)
+(0.15cm,0cm)        %% default is (0.3cm,0cm)
+(0.3cm,0cm)         %% default is (0.6cm,0cm)
+};%
+}
+}
+
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\renewcommand{\familydefault}{\rmdefault}
+
+
+\begin{document}
+
+\input{./plots/ac.tex}\\
+\input{./plots/dc.tex}\\
+
+\end{document}

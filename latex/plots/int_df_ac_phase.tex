@@ -1,0 +1,43 @@
+\tikzsetnextfilename{int_df_ac_phase}
+\begin{tikzpicture}
+\begin{semilogxaxis}[
+    xlabel={Frequency [Hz]},
+    ylabel={Phase [°]},
+    xmin=1e-1, xmax=1e5,
+    ymin=-135, ymax=45,
+%    xtick={1e-1,1e0,1e2,1e3,1e4,1e5},
+    xtick={1e-1,1e1,1e3,1e5},
+    ytick={0,-45,...,-90},
+%    yticklabel style={/pgf/number format/.cd,fixed,fixed zerofill,precision=0},
+    legend pos=north east,
+    legend columns=2,
+    width  = 4.1cm,
+    height = 4.0cm    
+]
+
+\addplot [
+    color=red,
+    no marks,
+    mark repeat = 6,
+    mark phase = 1,
+    dashed,
+   	smooth
+    ]
+    table [each nth point={1}, x expr=\thisrowno{0}, y expr=\thisrowno{1}, col sep=comma]
+    {./data/nautaa/int_df_ac_03_phase.csv};
+\addlegendentry{Conv.}
+
+\addplot [
+	color=blue,
+	no marks,
+	mark repeat = 6,
+	mark phase = 3,
+	solid,
+	smooth
+	]
+	table [each nth point={1}, x expr=\thisrowno{0}, y expr=\thisrowno{1}, col sep=comma]
+    {./data/nautab/int_df_ac_03_phase.csv};
+\addlegendentry{Impr.}
+
+\end{semilogxaxis}
+\end{tikzpicture}

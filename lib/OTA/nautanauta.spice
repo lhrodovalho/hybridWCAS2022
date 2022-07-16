@@ -1,0 +1,20 @@
+.subckt nautanauta ip im op om vdd vss
+  xap ip xm vdd vss inv2_1
+  xam im xp vdd vss inv2_1
+  xbp xp xm vdd vss inv1_1
+  xbm xm xp vdd vss inv1_1
+  xcp xm xm vdd vss inv1_1
+  xcm xp xp vdd vss inv1_1
+  xdp xp om vdd vss inv4_1
+  xdm xm op vdd vss inv4_1
+  xep op op vdd vss inv2_1
+  xem om om vdd vss inv2_1
+  xfp op om vdd vss inv2_1
+  xfm om op vdd vss inv2_1
+  xgp ip om vdd vss inv4_1
+  xgm im op vdd vss inv4_1
+
+  ccp xp om 2p
+  ccm xm op 2p
+.ends
+

@@ -1,0 +1,9 @@
+.subckt nauta ip im op om vdd vss
+  xap ip om vdd vss inv2_1
+  xam im op vdd vss inv2_1
+  xbp op om vdd vss inv1_1
+  xbm om op vdd vss inv1_1
+  xcp om om vdd vss inv1_1
+  xcm op op vdd vss inv1_1
+.ends
+

@@ -1,0 +1,51 @@
+\tikzsetnextfilename{linv_gmN}
+\begin{tikzpicture}
+\begin{axis}[
+    xlabel={Input Voltage [mV]},
+    ylabel={Norm. Transconductance},
+    xmin=-300, xmax=300,
+    ymin=0.5, ymax=4.5,
+    xtick={-300,-150,...,300},
+%    ytick={0.5,1.0,...,2.0},
+    yticklabel style={/pgf/number format/.cd,fixed,fixed zerofill,precision=1},
+    legend pos=north east,
+    legend columns=1,
+%    width  = 8.0cm,
+%    height = 6.0cm    
+]
+
+\addplot [
+    color=red,
+    no marks,
+    mark repeat = 6,
+    mark phase = 1,
+    solid
+    ]
+    table [each nth point={1}, x expr=\thisrowno{0}*1e3, y expr=\thisrowno{1}, col sep=comma]
+    {./data/inv0_gmN.csv};
+\addlegendentry{INV0}
+
+\addplot [
+	color=blue,
+	no marks,
+	mark repeat = 6,
+	mark phase = 1,
+	dashed
+]
+	table [each nth point={1}, x expr=\thisrowno{0}*1e3, y expr=\thisrowno{1}, col sep=comma]
+    {./data/inv1_gmN.csv};
+\addlegendentry{INV1}
+
+\addplot [
+	color=green,
+	no marks,
+	mark repeat = 6,
+	mark phase = 1,
+	dotted
+	]
+	table [each nth point={1}, x expr=\thisrowno{0}*1e3, y expr=\thisrowno{1}, col sep=comma]
+    {./data/inv2_gmN.csv};
+\addlegendentry{INV2}
+
+\end{axis}
+\end{tikzpicture}

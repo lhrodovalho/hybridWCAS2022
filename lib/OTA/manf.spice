@@ -1,0 +1,12 @@
+.subckt manf ip im op om vdd vss
+  xap ip om vdd vss inv2_1
+  xam im op vdd vss inv2_1
+  xbp op x  vdd vss inv1_1
+  xbm om x  vdd vss inv1_1
+  xc  x  x  vdd vss inv2_1
+  xd  x  y  vdd vss inv1_1
+  xe  y  y  vdd vss inv1_1
+  xfp y  om vdd vss inv2_1
+  xfm y  op vdd vss inv2_1
+.ends
+

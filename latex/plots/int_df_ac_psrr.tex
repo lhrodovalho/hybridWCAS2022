@@ -1,0 +1,43 @@
+\tikzsetnextfilename{int_df_ac_psrr}
+\begin{tikzpicture}
+\begin{semilogxaxis}[
+    xlabel={Frequency [Hz]},
+    ylabel={PSRR [dB]},
+    xmin=1e-1, xmax=1e5,
+    ymin=-55, ymax=55,
+%    xtick={1e-1,1e0,1e2,1e3,1e4,1e5},
+    xtick={1e-1,1e1,1e3,1e5},
+    ytick={-40,-20,...,50},
+    yticklabel style={/pgf/number format/.cd,fixed,fixed zerofill,precision=0},
+    legend pos=south west,
+    legend columns=1,
+    width  = 4.1cm,
+    height = 4.0cm    
+]
+
+\addplot [
+    color=red,
+    no marks,
+    mark repeat = 6,
+    mark phase = 1,
+    solid,
+   	smooth
+    ]
+    table [each nth point={1}, x expr=\thisrowno{0}, y expr=\thisrowno{1}, col sep=comma]
+    {./data/nauta/psrr.csv};
+\addlegendentry{Nauta}
+
+\addplot [
+	color=blue,
+	no marks,
+	mark repeat = 6,
+	mark phase = 3,
+	solid,
+	smooth
+	]
+	table [each nth point={1}, x expr=\thisrowno{0}, y expr=\thisrowno{1}, col sep=comma]
+    {./data/manf/psrr.csv};
+\addlegendentry{Manf}
+
+\end{semilogxaxis}
+\end{tikzpicture}

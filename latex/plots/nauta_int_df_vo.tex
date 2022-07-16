@@ -1,0 +1,38 @@
+\tikzsetnextfilename{inv_int_vo}
+\begin{tikzpicture}
+\begin{axis}[
+    xlabel={Input voltage [mV]},
+    ylabel={Output Voltage [mV]},
+%    xmin=344, xmax=356,
+%    ymin=-25, ymax=725,
+    xtick={344,346,...,366},
+    ytick={0,100,...,700},
+        yticklabel style={/pgf/number format/.cd,fixed,fixed zerofill,precision=0},
+    legend pos=north east,
+    legend columns=1,
+]
+
+\addplot [
+    color=red,
+    no marks,
+    mark repeat = 6,
+    mark phase = 1,
+    solid
+    ]
+    table [each nth point={1}, x expr=\thisrowno{0}*1e3, y expr=\thisrowno{1}*1e3, col sep=comma]
+    {./data/nauta/int_df_vo.csv};
+\addlegendentry{Nauta}
+
+\addplot [
+	color=blue,
+	no marks,
+	mark repeat = 6,
+	mark phase = 3,
+	solid
+	]
+	table [each nth point={1}, x expr=\thisrowno{0}*1e3, y expr=\thisrowno{1}*1e3, col sep=comma]
+    {./data/manf/int_df_vo.csv};
+\addlegendentry{Manf}
+
+\end{axis}
+\end{tikzpicture}

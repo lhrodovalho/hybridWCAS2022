@@ -1,0 +1,73 @@
+* CMOS inverter-based single-ended amplifiers open-loop testbench
+
+* Include SkyWater sky130 device models
+.lib "/usr/share/pdk/sky130A/libs.tech/ngspice/sky130.lib.spice" tt
+.param mc_mm_switch=0
+
+.include "../aux/array5v0.spice"
+.include "../aux/inv.spice"
+.include "nauta.spice"
+.include "barth.spice"
+.include "manf.spice"
+.include "barthmanf.spice"
+.include "barthnauta.spice"
+.include "nautanauta.spice"
+.include "nautavieru.spice"
+.include "manfvieru.spice"
+
+.param pVDD = 3.0
+
+VDD  vdd 0 dc {pVDD}
+VSS  vss 0 0
+
+vin in vss 0
+
+x0 in in op0 om0 vdd vss nauta
+x1 in in op1 om1 vdd vss barth
+x2 in in op2 om2 vdd vss manf
+x3 in in op3 om3 vdd vss barthnauta
+x4 in in op4 om4 vdd vss barthmanf
+x5 in in op5 om5 vdd vss nautanauta
+x6 in in op6 om6 vdd vss nautavieru
+x7 in in op7 om7 vdd vss manfvieru
+
+
+.option gmin=1e-15
+.param dx = 1
+.dc vin 0 {pVDD} {pVDD/(1001)}
+
+.control
+	run
+
+	let o0 = (op0+om0)/2
+	let o1 = (op1+om1)/2
+	let o2 = (op2+om2)/2
+	let o3 = (op3+om3)/2
+	let o4 = (op4+om4)/2
+	let o5 = (op5+om5)/2
+	let o6 = (op6+om6)/2
+	let o7 = (op7+om7)/2
+
+	plot o0 o1 o2
+	plot o0 o3 o4
+	plot o5 o6 o7
+	
+	let av0 = abs(deriv(o0)/deriv(in))
+	let av1 = abs(deriv(o1)/deriv(in))
+	let av2 = abs(deriv(o2)/deriv(in))
+	let av3 = abs(deriv(o3)/deriv(in))
+	let av4 = abs(deriv(o4)/deriv(in))
+	let av5 = abs(deriv(o5)/deriv(in))
+	let av6 = abs(deriv(o6)/deriv(in))
+	let av7 = abs(deriv(o7)/deriv(in))
+
+	plot av0 av1 av2 ylog
+	plot av0 av3 av4 ylog
+	plot av5 av6 av7 ylog
+
+	wrdata ../data/dc_cm_o.txt o0 o1 o2 o3 o4 o5 o6 o7
+	wrdata ../data/dc_cm_av.txt av0 av1 av2 av3 av4 av5 av6 av7
+	
+.endc
+
+.end

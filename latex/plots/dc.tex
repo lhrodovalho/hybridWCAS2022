@@ -1,0 +1,467 @@
+\tikzsetnextfilename{dc}
+\begin{tikzpicture}
+
+\begin{scope}[shift={(0.0cm,-0.0cm)}]
+\begin{axis}[
+	xlabel={Diff. input voltage (V)},
+	ylabel={Diff. output voltage (V)},
+	xmin=-0.4, xmax=0.4,
+	ymin=-3, ymax=3,
+%	xtick={-1,-0.5,0,0.5,1},
+	xtick={-0.4,-0.2,0,0.2,0.4},
+	ytick={-3,-1.5,0,1.5,3},
+	yticklabel style={/pgf/number format/.cd,fixed,fixed zerofill,precision=1},
+	legend pos=north west,
+	legend columns=1,
+	width  = 6.5cm,
+	height = 4.0cm    
+	]
+	
+	\addplot [
+	color=red,
+	no marks,
+	mark repeat = 6,
+	mark phase = 1,
+	solid
+	]
+	table [each nth point={1}, x expr=\thisrowno{1}, y expr=\thisrowno{3}, col sep=comma]
+	{./data/dc_df_vo.csv};
+	\addlegendentry{N}
+	
+	\addplot [
+	color=blue,
+	no marks,
+	mark repeat = 6,
+	mark phase = 1,
+	dashed
+	]
+	table [each nth point={1}, x expr=\thisrowno{1}, y expr=\thisrowno{5}, col sep=comma]
+	{./data/dc_df_vo.csv};
+	\addlegendentry{B}
+	
+	\addplot [
+	color=green,
+	no marks,
+	mark repeat = 6,
+	mark phase = 1,
+	dotted
+	]
+	table [each nth point={1}, x expr=\thisrowno{1}, y expr=\thisrowno{7}, col sep=comma]
+	{./data/dc_df_vo.csv};
+	\addlegendentry{M}
+	
+\end{axis}
+\end{scope}
+
+\begin{scope}[shift={(0.0cm,-3.5cm)}]	
+	\begin{axis}[
+		xlabel={Diff. output voltage (V)},
+		ylabel={Diff. gain (dB)},
+		xmin=-3, xmax=3,
+		ymin=-50, ymax=50,
+		xtick={-3,-1.5,0,1.5,3},
+		ytick={-40,-20,0,20,40},
+		%        yticklabel style={/pgf/number format/.cd,fixed,fixed zerofill,precision=0},
+		legend pos=south west,
+		legend columns=3,
+		width  = 6.5cm,
+		height = 4.0cm    
+		]
+		
+		\addplot [
+		color=red,
+		no marks,
+		mark repeat = 6,
+		mark phase = 1,
+		solid
+		]
+		table [each nth point={1}, x expr=\thisrowno{1}, y expr={20*log10(\thisrowno{3})}, col sep=comma]
+		{./data/dc_df_av.csv};
+		\addlegendentry{N}
+		
+		\addplot [
+		color=blue,
+		no marks,
+		mark repeat = 6,
+		mark phase = 1,
+		dashed
+		]
+		table [each nth point={1}, x expr=\thisrowno{5}, y expr={20*log10(\thisrowno{7})}, col sep=comma]
+		{./data/dc_df_av.csv};
+		\addlegendentry{B}
+		
+		\addplot [
+		color=green,
+		no marks,
+		mark repeat = 6,
+		mark phase = 1,
+		dotted
+		]
+		table [each nth point={1}, x expr=\thisrowno{9}, y expr={20*log10(\thisrowno{11})}, col sep=comma]
+		{./data/dc_df_av.csv};
+	\addlegendentry{M}
+		
+\end{axis}
+\end{scope}
+
+\begin{scope}[shift={(0.0cm,-7.0cm)}]
+	\begin{axis}[
+		xlabel={CM input voltage (V)},
+		ylabel={CM output voltage (V)},
+		xmin=0, xmax=3,
+		ymin=0, ymax=3,
+		xtick={0,-0.5,1,1.5,2,2.5,3},
+		xtick={0,-0.5,1,1.5,2,2.5,3},
+		yticklabel style={/pgf/number format/.cd,fixed,fixed zerofill,precision=1},
+		legend pos=south west,
+		legend columns=3,
+		width  = 6.5cm,
+		height = 4.0cm    
+		]
+		
+		\addplot [
+		color=red,
+		no marks,
+		mark repeat = 6,
+		mark phase = 1,
+		solid
+		]
+		table [each nth point={1}, x expr=\thisrowno{0}, y expr=\thisrowno{1}, col sep=comma]
+		{./data/dc_cm_vo.csv};
+		\addlegendentry{N}
+		
+		\addplot [
+		color=blue,
+		no marks,
+		mark repeat = 6,
+		mark phase = 1,
+		dashed
+		]
+		table [each nth point={1}, x expr=\thisrowno{0}, y expr=\thisrowno{3}, col sep=comma]
+		{./data/dc_cm_vo.csv};
+		\addlegendentry{B}
+		
+		\addplot [
+		color=green,
+		no marks,
+		mark repeat = 6,
+		mark phase = 1,
+		dotted
+		]
+		table [each nth point={1}, x expr=\thisrowno{0}, y expr=\thisrowno{5}, col sep=comma]
+		{./data/dc_cm_vo.csv};
+		\addlegendentry{M}
+		
+	\end{axis}
+\end{scope}
+
+\begin{scope}[shift={(6.0cm,-0.0cm)}]
+	\begin{axis}[
+		xlabel={Diff input voltage (V)},
+%		ylabel={Output voltage (dB)},
+		xmin=-0.4, xmax=0.4,
+		ymin=-3, ymax=3,
+%		xtick={-1,-0.5,0,0.5,1},
+		xtick={-0.4,-0.2,0,0.2,0.4},		
+		ytick={-3,-1.5,0,1.5,3},
+		yticklabel style={/pgf/number format/.cd,fixed,fixed zerofill,precision=1},
+		legend pos=north west,
+		legend columns=1,
+		width  = 6.5cm,
+		height = 4.0cm    
+		]
+		
+		\addplot [
+		color=red,
+		no marks,
+		mark repeat = 6,
+		mark phase = 1,
+		solid
+		]
+		table [each nth point={1}, x expr=\thisrowno{1}, y expr=\thisrowno{3}, col sep=comma]
+		{./data/dc_df_vo.csv};
+		\addlegendentry{N}
+		
+		\addplot [
+		color=blue,
+		no marks,
+		mark repeat = 6,
+		mark phase = 1,
+		dashed
+		]
+		table [each nth point={1}, x expr=\thisrowno{1}, y expr=\thisrowno{9}, col sep=comma]
+		{./data/dc_df_vo.csv};
+		\addlegendentry{B/N}
+		
+		\addplot [
+		color=green,
+		no marks,
+		mark repeat = 6,
+		mark phase = 1,
+		dotted
+		]
+		table [each nth point={1}, x expr=\thisrowno{1}, y expr=\thisrowno{11}, col sep=comma]
+		{./data/dc_df_vo.csv};
+		\addlegendentry{B/M}
+		
+	\end{axis}
+\end{scope}
+
+\begin{scope}[shift={(6.0cm,-3.5cm)}]	
+	\begin{axis}[
+		xlabel={Diff. output voltage (V)},
+%		ylabel={Differential Gain (dB)},
+		xmin=-3, xmax=3,
+		ymin=-50, ymax=50,
+		xtick={-3,-1.5,0,1.5,3},
+		ytick={-40,-20,0,20,40},
+		%        yticklabel style={/pgf/number format/.cd,fixed,fixed zerofill,precision=0},
+		legend pos=south west,
+		legend columns=3,
+		width  = 6.5cm,
+		height = 4.0cm    
+		]
+		
+		\addplot [
+		color=red,
+		no marks,
+		mark repeat = 6,
+		mark phase = 1,
+		solid
+		]
+		table [each nth point={1}, x expr=\thisrowno{1}, y expr={20*log10(\thisrowno{3})}, col sep=comma]
+		{./data/dc_df_av.csv};
+		\addlegendentry{N}
+		
+		\addplot [
+		color=blue,
+		no marks,
+		mark repeat = 6,
+		mark phase = 1,
+		dashed
+		]
+		table [each nth point={1}, x expr=\thisrowno{13}, y expr={20*log10(\thisrowno{15})}, col sep=comma]
+		{./data/dc_df_av.csv};
+		\addlegendentry{B/N}
+		
+		\addplot [
+		color=green,
+		no marks,
+		mark repeat = 6,
+		mark phase = 1,
+		dotted
+		]
+		table [each nth point={1}, x expr=\thisrowno{17}, y expr={20*log10(\thisrowno{19})}, col sep=comma]
+		{./data/dc_df_av.csv};
+		\addlegendentry{B/M}
+		
+	\end{axis}
+\end{scope}
+
+\begin{scope}[shift={(6.0cm,-7.0cm)}]
+	\begin{axis}[
+		xlabel={CM unput voltage (V)},
+%		ylabel={Output voltage (V)},
+		xmin=0, xmax=3,
+		ymin=0, ymax=3,
+		xtick={0,0.5,1,1.5,2,2.5,3},
+		ytick={0,0.5,1,1.5,2,2.5,3},
+		yticklabel style={/pgf/number format/.cd,fixed,fixed zerofill,precision=1},
+		legend pos=south west,
+		legend columns=3,
+		width  = 6.5cm,
+		height = 4.0cm    
+		]
+		
+		\addplot [
+		color=red,
+		no marks,
+		mark repeat = 6,
+		mark phase = 1,
+		solid
+		]
+		table [each nth point={1}, x expr=\thisrowno{0}, y expr=\thisrowno{1}, col sep=comma]
+		{./data/dc_cm_vo.csv};
+		\addlegendentry{N}
+		
+		\addplot [
+		color=blue,
+		no marks,
+		mark repeat = 6,
+		mark phase = 1,
+		dashed
+		]
+		table [each nth point={1}, x expr=\thisrowno{0}, y expr=\thisrowno{7}, col sep=comma]
+		{./data/dc_cm_vo.csv};
+		\addlegendentry{B/N}
+		
+		\addplot [
+		color=green,
+		no marks,
+		mark repeat = 6,
+		mark phase = 1,
+		dotted
+		]
+		table [each nth point={1}, x expr=\thisrowno{0}, y expr=\thisrowno{9}, col sep=comma]
+		{./data/dc_cm_vo.csv};
+		\addlegendentry{B/M}
+		
+	\end{axis}
+\end{scope}
+
+\begin{scope}[shift={(12.0cm,-0.0cm)}]
+	\begin{axis}[
+		xlabel={Diff. input voltage (V)},
+		%		ylabel={Output voltage (dB)},
+		xmin=-0.4, xmax=0.4,
+		ymin=-3, ymax=3,
+%		xtick={-1,-0.5,0,0.5,1},
+		xtick={-0.4,-0.2,0,0.2,0.4},
+		ytick={-3,-1.5,0,1.5,3},
+		yticklabel style={/pgf/number format/.cd,fixed,fixed zerofill,precision=1},
+		legend pos=north west,
+		legend columns=1,
+		width  = 6.5cm,
+		height = 4.0cm    
+		]
+		
+		\addplot [
+		color=red,
+		no marks,
+		mark repeat = 6,
+		mark phase = 1,
+		solid
+		]
+		table [each nth point={1}, x expr=\thisrowno{1}, y expr=\thisrowno{13}, col sep=comma]
+		{./data/dc_df_vo.csv};
+		\addlegendentry{N/N}
+		
+		\addplot [
+		color=blue,
+		no marks,
+		mark repeat = 6,
+		mark phase = 1,
+		dashed
+		]
+		table [each nth point={1}, x expr=\thisrowno{1}, y expr=\thisrowno{15}, col sep=comma]
+		{./data/dc_df_vo.csv};
+		\addlegendentry{N/V}
+		
+		\addplot [
+		color=green,
+		no marks,
+		mark repeat = 6,
+		mark phase = 1,
+		dotted
+		]
+		table [each nth point={1}, x expr=\thisrowno{1}, y expr=\thisrowno{17}, col sep=comma]
+		{./data/dc_df_vo.csv};
+		\addlegendentry{M/V}
+		
+	\end{axis}
+\end{scope}
+
+\begin{scope}[shift={(12.0cm,-3.5cm)}]	
+	\begin{axis}[
+		xlabel={Diff. output voltage (V)},
+		%		ylabel={Differential Gain (dB)},
+		xmin=-3, xmax=3,
+		ymin=-50, ymax=50,
+		xtick={-3,-1.5,0,1.5,3},
+		ytick={-40,-20,0,20,40},
+		%        yticklabel style={/pgf/number format/.cd,fixed,fixed zerofill,precision=0},
+		legend pos=south west,
+		legend columns=3,
+		width  = 6.5cm,
+		height = 4.0cm    
+		]
+		
+		\addplot [
+		color=red,
+		no marks,
+		mark repeat = 6,
+		mark phase = 1,
+		solid
+		]
+		table [each nth point={1}, x expr=\thisrowno{21}, y expr={20*log10(\thisrowno{23})}, col sep=comma]
+		{./data/dc_df_av.csv};
+		\addlegendentry{N/N}
+		
+		\addplot [
+		color=blue,
+		no marks,
+		mark repeat = 6,
+		mark phase = 1,
+		dashed
+		]
+		table [each nth point={1}, x expr=\thisrowno{25}, y expr={20*log10(\thisrowno{27})}, col sep=comma]
+		{./data/dc_df_av.csv};
+		\addlegendentry{N/V}
+		
+		\addplot [
+		color=green,
+		no marks,
+		mark repeat = 6,
+		mark phase = 1,
+		dotted
+		]
+		table [each nth point={1}, x expr=\thisrowno{29}, y expr={20*log10(\thisrowno{31})}, col sep=comma]
+		{./data/dc_df_av.csv};
+		\addlegendentry{M/V}
+		
+	\end{axis}
+\end{scope}
+
+\begin{scope}[shift={(12.0cm,-7.0cm)}]
+	\begin{axis}[
+		xlabel={CM input voltage (V)},
+%		ylabel={Output voltage (V)},
+		xmin=0, xmax=3,
+		ymin=0, ymax=3,
+		xtick={0,0.5,1,1.5,2,2.5,3},
+		ytick={0,0.5,1,1.5,2,2.5,3},
+		yticklabel style={/pgf/number format/.cd,fixed,fixed zerofill,precision=1},
+		legend pos=south west,
+		legend columns=3,
+		width  = 6.5cm,
+		height = 4.0cm    
+		]
+		
+		\addplot [
+		color=red,
+		no marks,
+		mark repeat = 6,
+		mark phase = 1,
+		solid
+		]
+		table [each nth point={1}, x expr=\thisrowno{0}, y expr=\thisrowno{11}, col sep=comma]
+		{./data/dc_cm_vo.csv};
+		\addlegendentry{N/N}
+		
+		\addplot [
+		color=blue,
+		no marks,
+		mark repeat = 6,
+		mark phase = 1,
+		dashed
+		]
+		table [each nth point={1}, x expr=\thisrowno{0}, y expr=\thisrowno{13}, col sep=comma]
+		{./data/dc_cm_vo.csv};
+		\addlegendentry{N/V}
+		
+		\addplot [
+		color=green,
+		no marks,
+		mark repeat = 6,
+		mark phase = 1,
+		dotted
+		]
+		table [each nth point={1}, x expr=\thisrowno{0}, y expr=\thisrowno{15}, col sep=comma]
+		{./data/dc_cm_vo.csv};
+		\addlegendentry{M/V}
+		
+	\end{axis}
+\end{scope}
+
+
+\end{tikzpicture}

@@ -1,0 +1,66 @@
+* CMOS inverters
+
+.subckt inv1_1 in out vdd vss
+xp out in vdd vdd p1_1
+xn out in vss vss n1_1
+.ends
+
+.subckt linv1_1 in out vdd vss
+xpa p   q  vdd vdd p2_1
+xpb q   q  p   vdd p1_1
+xpc out in p   vdd p1_1
+xnc out in n   vss n1_1
+xnb q   q  n   vss n1_1
+xna n   q  vss vss n2_1
+.ends
+
+.subckt inv1_2 in out vdd vss
+xp out in vdd vdd p1_2
+xn out in vss vss n1_2
+.ends
+
+.subckt inv1_4 in out vdd vss
+xp out in vdd vdd p1_4
+xn out in vss vss n1_4
+.ends
+
+.subckt inv1_8 in out vdd vss
+xp out in vdd vdd p1_8
+xn out in vss vss n1_8
+.ends
+
+.subckt inv2_1 in out vdd vss
+xl in out vdd vss inv1_1
+xr in out vdd vss inv1_1
+.ends
+
+.subckt inv2_2 in out vdd vss
+xl in out vdd vss inv1_2
+xr in out vdd vss inv1_2
+.ends
+
+.subckt inv2_4 in out vdd vss
+xl in out vdd vss inv1_4
+xr in out vdd vss inv1_4
+.ends
+
+.subckt inv4_1 in out vdd vss
+xl in out vdd vss inv2_1
+xr in out vdd vss inv2_1
+.ends
+
+.subckt inv4_2 in out vdd vss
+xl in out vdd vss inv2_2
+xr in out vdd vss inv2_2
+.ends
+
+.subckt inv4_4 in out vdd vss
+xl in out vdd vss inv2_4
+xr in out vdd vss inv2_4
+.ends
+
+.subckt inv8_1 in out vdd vss
+xl in out vdd vss inv4_1
+xr in out vdd vss inv4_1
+.ends
+

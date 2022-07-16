@@ -1,0 +1,14 @@
+.subckt barthnauta ip im op om vdd vss
+  xap ip om vdd vss inv2_1
+  xam im op vdd vss inv2_1
+  xbp ip x  vdd vss inv1_1
+  xbm im x  vdd vss inv1_1
+  xc  x  x  vdd vss inv2_1
+  xdp x  om vdd vss inv2_1
+  xdm x  op vdd vss inv2_1
+  xep op op vdd vss inv1_1
+  xem om om vdd vss inv1_1
+  xfp op om vdd vss inv1_1
+  xfm om op vdd vss inv1_1
+.ends
+

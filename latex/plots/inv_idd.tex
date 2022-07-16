@@ -1,0 +1,42 @@
+\tikzsetnextfilename{inv_idd}
+\begin{tikzpicture}
+\begin{semilogyaxis}[
+    xlabel={Supply voltage [mV]},
+    ylabel={Quiesc. current [A]},
+    xmin=100, xmax=900,
+    ymin=4e-11, ymax=4e-5,
+    xtick={100,300,...,900},
+    ytick={1e-11,1e-10,1e-9,1e-8,1e-7,1e-6,1e-5,1e-4,1e-3},
+%        yticklabel style={/pgf/number format/.cd,fixed,fixed zerofill,precision=1},
+    legend pos=north west,
+    legend columns=1,
+    width  = 3.8cm,
+    height = 4.0cm    
+]
+
+\addplot [
+    color=red,
+    no marks,
+    mark repeat = 6,
+    mark phase = 1,
+    dashed,
+   	smooth
+    ]
+    table [each nth point={1}, x expr=\thisrowno{0}*1e3, y expr=\thisrowno{1}, col sep=comma]
+    {./data/inv/inva_idd.csv};
+\addlegendentry{Conv.}
+
+\addplot [
+	color=blue,
+	no marks,
+	mark repeat = 6,
+	mark phase = 3,
+	solid,
+	smooth
+	]
+	table [each nth point={1}, x expr=\thisrowno{0}*1e3, y expr=\thisrowno{1}, col sep=comma]
+    {./data/inv/invb_idd.csv};
+\addlegendentry{Impr.}
+
+\end{semilogyaxis}
+\end{tikzpicture}

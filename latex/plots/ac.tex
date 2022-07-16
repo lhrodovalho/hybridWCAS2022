@@ -1,0 +1,463 @@
+\tikzsetnextfilename{ac}
+\begin{tikzpicture}
+
+\begin{scope}[shift={(0.0cm,-0.0cm)}]
+\begin{semilogxaxis}[
+%	xlabel={Frequency [Hz]},
+	ylabel={Differential gain (dB)},
+	xmin=1e3, xmax=1e12,
+	ymin=-70, ymax=50,
+	xtick={1e3,1e6,1e9,1e12},
+	ytick={-60,-40,-20,0,20,40},
+	%        yticklabel style={/pgf/number format/.cd,fixed,fixed zerofill,precision=0},
+	legend pos=south west,
+	legend columns=1,
+	width  = 6.5cm,
+	height = 4.0cm    
+	]
+	
+	\addplot [
+	color=red,
+	no marks,
+	mark repeat = 6,
+	mark phase = 1,
+	solid
+	]
+	table [each nth point={1}, x expr=\thisrowno{0}, y expr=\thisrowno{1}, col sep=comma]
+	{./data/ac_df_av.csv};
+	\addlegendentry{N}
+	
+	\addplot [
+	color=blue,
+	no marks,
+	mark repeat = 6,
+	mark phase = 1,
+	dashed
+	]
+	table [each nth point={1}, x expr=\thisrowno{0}, y expr=\thisrowno{3}, col sep=comma]
+	{./data/ac_df_av.csv};
+	\addlegendentry{B}
+	
+	\addplot [
+	color=green,
+	no marks,
+	mark repeat = 6,
+	mark phase = 1,
+	dotted
+	]
+	table [each nth point={1}, x expr=\thisrowno{0}, y expr=\thisrowno{5}, col sep=comma]
+	{./data/ac_df_av.csv};
+	\addlegendentry{M}
+	
+\end{semilogxaxis}
+\end{scope}
+
+\begin{scope}[shift={(0.0cm,-3.0cm)}]	
+	\begin{semilogxaxis}[
+%		xlabel={Frequency [Hz]},
+		ylabel={Phase (°)},
+		xmin=1e3, xmax=1e12,
+		ymin=-45, ymax=225,
+		xtick={1e3,1e6,1e9,1e12},
+		ytick={180,90,0},
+		%        yticklabel style={/pgf/number format/.cd,fixed,fixed zerofill,precision=0},
+		legend pos=south west,
+		legend columns=1,
+		width  = 6.5cm,
+		height = 4.0cm    
+		]
+		
+		\addplot [
+		color=red,
+		no marks,
+		mark repeat = 6,
+		mark phase = 1,
+		solid
+		]
+		table [each nth point={1}, x expr=\thisrowno{0}, y expr=\thisrowno{1}, col sep=comma]
+		{./data/ac_df_ph.csv};
+		\addlegendentry{N}
+		
+		\addplot [
+		color=blue,
+		no marks,
+		mark repeat = 6,
+		mark phase = 1,
+		dashed
+		]
+		table [each nth point={1}, x expr=\thisrowno{0}, y expr=\thisrowno{3}, col sep=comma]
+		{./data/ac_df_ph.csv};
+		\addlegendentry{B}
+		
+		\addplot [
+		color=green,
+		no marks,
+		mark repeat = 6,
+		mark phase = 1,
+		dotted
+		]
+		table [each nth point={1}, x expr=\thisrowno{0}, y expr=\thisrowno{5}, col sep=comma]
+		{./data/ac_df_ph.csv};
+	\addlegendentry{M}
+		
+\end{semilogxaxis}
+\end{scope}
+
+\begin{scope}[shift={(0.0cm,-6.0cm)}]	
+\begin{semilogxaxis}[
+    xlabel={Frequency (Hz)},
+    ylabel={Common-mode gain (dB)},
+    xmin=1e3, xmax=1e12,
+	ymin=-70, ymax=50,
+	xtick={1e3,1e6,1e9,1e12},
+	ytick={-60,-40,-20,0,20,40},
+%        yticklabel style={/pgf/number format/.cd,fixed,fixed zerofill,precision=0},
+    legend pos=north east,
+    legend columns=1,
+    width  = 6.5cm,
+    height = 4.0cm    
+]
+
+\addplot [
+    color=red,
+    no marks,
+    mark repeat = 6,
+    mark phase = 1,
+    solid
+    ]
+    table [each nth point={1}, x expr=\thisrowno{0}, y expr=\thisrowno{1}, col sep=comma]
+	{./data/ac_cm_av.csv};
+\addlegendentry{N}
+
+\addplot [
+	color=blue,
+	no marks,
+	mark repeat = 6,
+	mark phase = 1,
+	dashed
+]
+	table [each nth point={1}, x expr=\thisrowno{0}, y expr=\thisrowno{3}, col sep=comma]
+	{./data/ac_cm_av.csv};
+\addlegendentry{B}
+
+\addplot [
+	color=green,
+	no marks,
+	mark repeat = 6,
+	mark phase = 1,
+	dotted
+	]
+	table [each nth point={1}, x expr=\thisrowno{0}, y expr=\thisrowno{5}, col sep=comma]
+	{./data/ac_cm_av.csv};
+\addlegendentry{M}
+
+\end{semilogxaxis}
+\end{scope}
+
+\begin{scope}[shift={(6.0cm,-0.0cm)}]
+	\begin{semilogxaxis}[
+		%	xlabel={Frequency [Hz]},
+%		ylabel={Differential gain [dB]},
+		xmin=1e3, xmax=1e12,
+		ymin=-70, ymax=50,
+		xtick={1e3,1e6,1e9,1e12},
+		ytick={-60,-40,-20,0,20,40},
+		%        yticklabel style={/pgf/number format/.cd,fixed,fixed zerofill,precision=0},
+		legend pos=south west,
+		legend columns=1,
+		width  = 6.5cm,
+		height = 4.0cm    
+		]
+		
+		\addplot [
+		color=red,
+		no marks,
+		mark repeat = 6,
+		mark phase = 1,
+		solid
+		]
+		table [each nth point={1}, x expr=\thisrowno{0}, y expr=\thisrowno{1}, col sep=comma]
+		{./data/ac_df_av.csv};
+		\addlegendentry{N}
+		
+		\addplot [
+		color=blue,
+		no marks,
+		mark repeat = 6,
+		mark phase = 1,
+		dashed
+		]
+		table [each nth point={1}, x expr=\thisrowno{0}, y expr=\thisrowno{7}, col sep=comma]
+		{./data/ac_df_av.csv};
+		\addlegendentry{B/N}
+		
+		\addplot [
+		color=green,
+		no marks,
+		mark repeat = 6,
+		mark phase = 1,
+		dotted
+		]
+		table [each nth point={1}, x expr=\thisrowno{0}, y expr=\thisrowno{9}, col sep=comma]
+		{./data/ac_df_av.csv};
+		\addlegendentry{B/M}
+		
+	\end{semilogxaxis}
+\end{scope}
+
+\begin{scope}[shift={(6.0cm,-3.0cm)}]	
+	\begin{semilogxaxis}[
+		%		xlabel={Frequency [Hz]},
+%		ylabel={Phase [°]},
+		xmin=1e3, xmax=1e12,
+		ymin=-45, ymax=225,
+		xtick={1e3,1e6,1e9,1e12},
+		ytick={180,90,0},
+		%        yticklabel style={/pgf/number format/.cd,fixed,fixed zerofill,precision=0},
+		legend pos=south west,
+		legend columns=1,
+		width  = 6.5cm,
+		height = 4.0cm    
+		]
+		
+		\addplot [
+		color=red,
+		no marks,
+		mark repeat = 6,
+		mark phase = 1,
+		solid
+		]
+		table [each nth point={1}, x expr=\thisrowno{0}, y expr=\thisrowno{1}, col sep=comma]
+		{./data/ac_df_ph.csv};
+		\addlegendentry{N}
+		
+		\addplot [
+		color=blue,
+		no marks,
+		mark repeat = 6,
+		mark phase = 1,
+		dashed
+		]
+		table [each nth point={1}, x expr=\thisrowno{0}, y expr=\thisrowno{7}, col sep=comma]
+		{./data/ac_df_ph.csv};
+		\addlegendentry{B/N}
+		
+		\addplot [
+		color=green,
+		no marks,
+		mark repeat = 6,
+		mark phase = 1,
+		dotted
+		]
+		table [each nth point={1}, x expr=\thisrowno{0}, y expr=\thisrowno{9}, col sep=comma]
+		{./data/ac_df_ph.csv};
+		\addlegendentry{B/M}
+		
+	\end{semilogxaxis}
+\end{scope}
+
+\begin{scope}[shift={(6.0cm,-6.0cm)}]	
+	\begin{semilogxaxis}[
+		xlabel={Frequency (Hz)},
+%		ylabel={Common-mode gain [dB]},
+		xmin=1e3, xmax=1e12,
+		ymin=-70, ymax=50,
+		xtick={1e3,1e6,1e9,1e12},
+		ytick={-60,-40,-20,0,20,40},
+		%        yticklabel style={/pgf/number format/.cd,fixed,fixed zerofill,precision=0},
+		legend pos=north east,
+		legend columns=1,
+		width  = 6.5cm,
+		height = 4.0cm    
+		]
+		
+		\addplot [
+		color=red,
+		no marks,
+		mark repeat = 6,
+		mark phase = 1,
+		solid
+		]
+		table [each nth point={1}, x expr=\thisrowno{0}, y expr=\thisrowno{1}, col sep=comma]
+		{./data/ac_cm_av.csv};
+		\addlegendentry{N}
+		
+		\addplot [
+		color=blue,
+		no marks,
+		mark repeat = 6,
+		mark phase = 1,
+		dashed
+		]
+		table [each nth point={1}, x expr=\thisrowno{0}, y expr=\thisrowno{7}, col sep=comma]
+		{./data/ac_cm_av.csv};
+		\addlegendentry{B/N}
+		
+		\addplot [
+		color=green,
+		no marks,
+		mark repeat = 6,
+		mark phase = 1,
+		dotted
+		]
+		table [each nth point={1}, x expr=\thisrowno{0}, y expr=\thisrowno{9}, col sep=comma]
+		{./data/ac_cm_av.csv};
+		\addlegendentry{B/M}
+		
+	\end{semilogxaxis}
+\end{scope}
+
+\begin{scope}[shift={(12.0cm,-0.0cm)}]
+	\begin{semilogxaxis}[
+%	xlabel={Frequency [Hz]},
+%		ylabel={Differential gain [dB]},
+		xmin=1e3, xmax=1e12,
+		ymin=-70, ymax=50,
+		xtick={1e3,1e6,1e9,1e12},
+		ytick={-60,-40,-20,0,20,40},
+		%        yticklabel style={/pgf/number format/.cd,fixed,fixed zerofill,precision=0},
+		legend pos=south west,
+		legend columns=1,
+		width  = 6.5cm,
+		height = 4.0cm    
+		]
+		
+		\addplot [
+		color=red,
+		no marks,
+		mark repeat = 6,
+		mark phase = 1,
+		solid
+		]
+		table [each nth point={1}, x expr=\thisrowno{0}, y expr=\thisrowno{11}, col sep=comma]
+		{./data/ac_df_av.csv};
+		\addlegendentry{N/N}
+		
+		\addplot [
+		color=blue,
+		no marks,
+		mark repeat = 6,
+		mark phase = 1,
+		dashed
+		]
+		table [each nth point={1}, x expr=\thisrowno{0}, y expr=\thisrowno{13}, col sep=comma]
+		{./data/ac_df_av.csv};
+		\addlegendentry{N/V}
+		
+		\addplot [
+		color=green,
+		no marks,
+		mark repeat = 6,
+		mark phase = 1,
+		dotted
+		]
+		table [each nth point={1}, x expr=\thisrowno{0}, y expr=\thisrowno{15}, col sep=comma]
+		{./data/ac_df_av.csv};
+		\addlegendentry{M/V}
+		
+	\end{semilogxaxis}
+\end{scope}
+
+\begin{scope}[shift={(12.0cm,-3.0cm)}]	
+	\begin{semilogxaxis}[
+%		xlabel={Frequency [Hz]},
+%		ylabel={Phase [°]},
+		xmin=1e3, xmax=1e12,
+		ymin=-45, ymax=225,
+		xtick={1e3,1e6,1e9,1e12},
+		ytick={180,90,0},
+		%        yticklabel style={/pgf/number format/.cd,fixed,fixed zerofill,precision=0},
+		legend pos=south west,
+		legend columns=1,
+		width  = 6.5cm,
+		height = 4.0cm    
+		]
+		
+		\addplot [
+		color=red,
+		no marks,
+		mark repeat = 6,
+		mark phase = 1,
+		solid
+		]
+		table [each nth point={1}, x expr=\thisrowno{0}, y expr=\thisrowno{11}, col sep=comma]
+		{./data/ac_df_ph.csv};
+		\addlegendentry{N/N}
+		
+		\addplot [
+		color=blue,
+		no marks,
+		mark repeat = 6,
+		mark phase = 1,
+		dashed
+		]
+		table [each nth point={1}, x expr=\thisrowno{0}, y expr=\thisrowno{13}, col sep=comma]
+		{./data/ac_df_ph.csv};
+		\addlegendentry{N/V}
+		
+		\addplot [
+		color=green,
+		no marks,
+		mark repeat = 6,
+		mark phase = 1,
+		dotted
+		]
+		table [each nth point={1}, x expr=\thisrowno{0}, y expr=\thisrowno{15}, col sep=comma]
+		{./data/ac_df_ph.csv};
+		\addlegendentry{M/V}
+		
+	\end{semilogxaxis}
+\end{scope}
+
+\begin{scope}[shift={(12.0cm,-6.0cm)}]	
+	\begin{semilogxaxis}[
+		xlabel={Frequency (Hz)},
+%		ylabel={Common-mode gain [dB]},
+		xmin=1e3, xmax=1e12,
+		ymin=-70, ymax=50,
+		xtick={1e3,1e6,1e9,1e12},
+		ytick={-60,-40,-20,0,20,40},
+		%        yticklabel style={/pgf/number format/.cd,fixed,fixed zerofill,precision=0},
+		legend pos=north east,
+		legend columns=2,
+		width  = 6.5cm,
+		height = 4.0cm    
+		]
+		
+		\addplot [
+		color=red,
+		no marks,
+		mark repeat = 6,
+		mark phase = 1,
+		solid
+		]
+		table [each nth point={1}, x expr=\thisrowno{0}, y expr=\thisrowno{11}, col sep=comma]
+		{./data/ac_cm_av.csv};
+		\addlegendentry{N/N}
+		
+		\addplot [
+		color=blue,
+		no marks,
+		mark repeat = 6,
+		mark phase = 1,
+		dashed
+		]
+		table [each nth point={1}, x expr=\thisrowno{0}, y expr=\thisrowno{13}, col sep=comma]
+		{./data/ac_cm_av.csv};
+		\addlegendentry{N/V}
+		
+		\addplot [
+		color=green,
+		no marks,
+		mark repeat = 6,
+		mark phase = 1,
+		dotted
+		]
+		table [each nth point={1}, x expr=\thisrowno{0}, y expr=\thisrowno{15}, col sep=comma]
+		{./data/ac_cm_av.csv};
+		\addlegendentry{M/V}
+		
+	\end{semilogxaxis}
+\end{scope}
+
+\end{tikzpicture}
